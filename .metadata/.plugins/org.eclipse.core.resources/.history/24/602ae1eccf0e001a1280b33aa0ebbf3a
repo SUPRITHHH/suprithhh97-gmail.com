@@ -1,0 +1,15 @@
+package com.tyss.assetmanagement.util;
+
+
+
+public class UserDAOManager {
+
+	private  UserDAOManager() {
+		
+	}
+
+	public static UserDAO getUserDao() {
+		return (UserDAO) new UserDAOJdbcImpl();
+
+}
+}

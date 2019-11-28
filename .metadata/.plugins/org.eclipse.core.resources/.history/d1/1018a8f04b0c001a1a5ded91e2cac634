@@ -1,0 +1,10 @@
+package com.tyss.jpawithhibernateapp.jpql;
+
+public class DeleteDynamicallyUsingJpql {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

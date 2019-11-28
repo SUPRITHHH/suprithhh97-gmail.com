@@ -1,0 +1,20 @@
+package com.tyss.springcore.di;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@Import(PetCo)
+public class HelloConfiguration {
+
+	
+	private String msg;
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	
+}

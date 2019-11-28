@@ -1,0 +1,17 @@
+package com.tyss.jpawithhibernateapp.onetoone;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+
+public class VoterCard {
+
+	@Column
+	private int vid;
+	
+	@Column
+	private String vname;
+
+	
+}

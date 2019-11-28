@@ -1,0 +1,22 @@
+package com.tyss.springcore.di;
+
+public class Pet {
+
+	private String name;
+	private Animal animal;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAnimal() {
+		return animal;
+	}
+	public void setAnimal(String animal) {
+		this.animal = animal;
+	}
+	
+	
+}

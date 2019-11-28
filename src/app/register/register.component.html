@@ -1,0 +1,135 @@
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">Register</h1>
+    <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email...." #email="ngModel" ngModel required>
+        <div *ngIf="email.touched && email.invalid">
+        <p class="alert alert-danger" *ngIf="email.errors.required">*This Field is required</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password..." #password="ngModel" ngModel required> 
+         <div *ngIf="password.touched && password.invalid">
+           <p class="alert alert-danger" *ngIf="password.errors.required">*This Field is Required</p>
+         </div>
+    
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Register</button>
+    </div>
+</form>
+
+<table class="table table-bordered table-striped table-dark col-md-8 offset-2 ">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Date</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.email | uppercase}}</td>
+            <td>{{user.password | dollar}}</td>
+            <td>{{Today | date}}</td>
+            <td>
+                <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="selectUser(user)">
+        Edit
+      </button> -->
+      
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" *ngIf="selectedUser">
+              
+        <form action="" class="" #form="ngForm" (ngSubmit)="UpdateData(form)">
+        <h1 class="text-center bg-dark text-white">Register</h1>
+        <input type="hidden" name="id" #id="ngModel" ngModel [(ngModel)]="selectedUser.id"> 
+        <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email...." #email="ngModel" ngModel required [(ngModel)]="selectedUser.email">
+            <div *ngIf="email.touched && email.invalid">
+            <p class="alert alert-danger" *ngIf="email.errors.required">*This Field is required</p>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password..." #password="ngModel" ngModel required  [(ngModel)]="selectedUser.password"> 
+             <div *ngIf="password.touched && password.invalid">
+               <p class="alert alert-danger" *ngIf="password.errors.required">*This Field is Required</p>
+             </div>
+        
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Update</button>
+        
+            </div>
+            </form> -->
+
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" (click)="selectUser(user)">
+        Edit
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document"  >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+             <div class="modal-body" *ngIf="SelectedUser" >   <!---- *ngIf="SelectedUser" -->
+                    <form action="" class="" #form="ngForm"  (ngSubmit)="UpdateData(form)" >  
+                            <h1 class="text-center bg-dark text-white">Register</h1>
+                             <input type="hidden" name="id" #id="ngModel" ngModel [(ngModel)]="SelectedUser.id">  <!---- [(ngModel)]="SelectedUser.id" -->
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email...." #email="ngModel" ngModel required [(ngModel)]="SelectedUser.email">  <!--[(ngModel)]="SelectedUser.email"--->
+                                <div *ngIf="email.touched && email.invalid">
+                                <p class="alert alert-danger" *ngIf="email.errors.required">*This Field is required</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                 <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password..." #password="ngModel" ngModel required  [(ngModel)]="SelectedUser.password"><!-- [(ngModel)]="SelectedUser.password" -->
+                                 <div *ngIf="password.touched && password.invalid">
+                                   <p class="alert alert-danger" *ngIf="password.errors.required">*This Field is Required</p>
+                                 </div>
+                            
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Update</button>
+                            
+                                </div>
+                                </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+            <!-- </div>
+          </div>
+        </div>
+      </div> -->
+            </td>
+            <td>
+                <button (click)="deleteData(user)"type=" button" class= " btn btn-outline-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

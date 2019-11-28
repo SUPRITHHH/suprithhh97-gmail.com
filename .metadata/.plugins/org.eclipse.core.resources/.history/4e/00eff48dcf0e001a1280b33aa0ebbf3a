@@ -1,0 +1,16 @@
+package com.tyss.assetmanagement.util;
+
+import com.testyantra.assestmangement.dao.UserDAO;
+import com.testyantra.assestmangement.dao.UserDAOJdbcImpl;
+
+public class UserDAOManger {
+
+	private  UserDAOManger() {
+		
+	}
+
+	public static UserDAO getUserDao() {
+		return (UserDAO) new UserDAOJdbcImpl();
+
+}
+}

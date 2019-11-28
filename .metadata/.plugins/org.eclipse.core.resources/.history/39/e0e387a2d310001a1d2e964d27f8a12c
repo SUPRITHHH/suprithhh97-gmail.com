@@ -1,0 +1,22 @@
+package com.tyss.springcore.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
+import com.tyss.springcore.PetConfiguration;
+import com.tyss.springcore.di.Hello;
+
+@Configuration
+@Import(PetConfiguration.class)
+public class HelloConfiguration {
+
+	 @Bean(name="hello")
+	//  @Scope("prototype")
+	    
+		public Hello getHello() {
+	    	Hello hello = new Hello();
+	    	hello.setMsg("I love Python");
+			return hello;
+		}
+}

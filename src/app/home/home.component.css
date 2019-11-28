@@ -1,0 +1,21 @@
+.x1{
+    
+     border-radius: 60%;
+     margin-left: -20%;
+    transform: scale(0.5,0.8);
+}
+
+.x2{
+    box-sizing: border-box;
+     margin-left: 10%;
+     margin-top: 10%;
+     height : 85%;
+     width : 80%;
+     border: 3px solid darkgray;
+     color: white;
+     
+}
+
+.x3{
+    margin-left: 30%;
+}

@@ -1,0 +1,5 @@
+package com.tyss.assetmanagement.util;
+
+public class UserDaoManager {
+
+}

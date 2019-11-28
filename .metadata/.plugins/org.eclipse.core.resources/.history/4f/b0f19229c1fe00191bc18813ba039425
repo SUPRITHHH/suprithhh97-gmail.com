@@ -1,0 +1,9 @@
+package com.testyantra.private1;
+
+public class TestA extends Private1 {
+
+	@Override
+	private void name() {
+		System.out.println("Hi");
+	}
+}

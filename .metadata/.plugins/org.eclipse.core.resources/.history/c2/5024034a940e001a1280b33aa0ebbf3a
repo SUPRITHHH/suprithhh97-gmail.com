@@ -1,0 +1,5 @@
+package com.tyss.assetmanagement.dao;
+
+public interface UserDaoManager {
+
+}

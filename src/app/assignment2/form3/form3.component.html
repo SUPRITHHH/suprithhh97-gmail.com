@@ -1,0 +1,46 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body bg-info" #form="ngForm" (ngSubmit)="loginData12(form)">
+    <h1 class="text-center bg-dark text-white">Form3</h1>
+    <div class="form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter user Name...." #name="ngModel" ngModel required minlength=2>
+        <div *ngIf="name.touched && name.invalid">
+        <p class="alert alert-danger" *ngIf="name.errors.minlength || name.errors.required">*This Field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="user" id="user" class="form-control" placeholder="User Page...." #user="ngModel" ngModel required>
+        <div *ngIf="user.touched && user.invalid">
+        <p class="alert alert-danger" *ngIf="user.errors.required">*This Field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group col-md-8">
+        
+        <label for="gender">Gender</label><br>
+        <input type="radio" name="gender" id="male">Male
+        <input type="radio" name="gender" id="female">female<br>
+        <input type="radio" name="gender" id="others">Others
+        <!-- <button type="submit" class="btn btn-outline-success float-right" [disabled]="skills.invalid" >Submitt</button> -->
+       
+      </div>
+
+       
+        <div class="form-group">
+            <input type="email" name="email1" id="email1" class="form-control" placeholder="Enter User Email...." #email1="ngModel" ngModel required minlength="2">
+            <div *ngIf="email1.touched && email1.invalid">
+            <p class="alert alert-danger" *ngIf="email1.errors.minlength || email1.errors.required">*This Field is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="tel" name="cnt" id="cnt" class="form-control" placeholder="Enter User Contact...." #cnt="ngModel" ngModel required minlength="10">
+            <div *ngIf="cnt.touched && cnt.invalid">
+            <p class="alert alert-danger" *ngIf="cnt.errors.minlength || cnt.errors.required ">*This Field is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+        <button type="submit" class="btn btn-outline-danger bg-success  float-right" [disabled]="form.invalid">Add User</button>
+        </div>
+
+</form>

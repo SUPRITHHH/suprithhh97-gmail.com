@@ -1,0 +1,17 @@
+package com.ty.streams.list;
+
+import java.util.ArrayList;
+
+public class TestA {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> a1 = new ArrayList<Integer>();
+		a1.add(20);
+		a1.add(23);
+		a1.add(5);
+		a1.add(12);
+		a1.add(4);
+		a1.add(24);
+	}
+}

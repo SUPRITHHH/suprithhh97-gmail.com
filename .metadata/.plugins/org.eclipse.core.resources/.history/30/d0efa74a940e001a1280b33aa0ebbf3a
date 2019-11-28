@@ -1,0 +1,8 @@
+package com.tyss.assetmanagement.dao;
+
+import com.tyss.empwebapp.dto.EmployeeInfo;
+
+public interface UserDaoManager {
+
+	public UserInfo auth(int id ,String password);
+}

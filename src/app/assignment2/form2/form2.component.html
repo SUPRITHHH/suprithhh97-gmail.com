@@ -1,0 +1,57 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body bg-success" #form="ngForm" (ngSubmit)="loginData1(form)">
+    <h1 class="text-center bg-dark text-white">Form2</h1>
+    <div class="form-group">
+        <input type="text" name="candidate" id="candidate" class="form-control" placeholder="Enter candidate Name...." #candidate="ngModel" ngModel required minlength=2>
+        <div *ngIf="candidate.touched && candidate.invalid">
+        <p class="alert alert-danger" *ngIf="candidate.errors.minlength">*This Field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="number" name="experience" id="experience" class="form-control" placeholder="Enter Company Experience...." #experience="ngModel" ngModel required>
+        <div *ngIf="experience.touched && experience.invalid">
+        <p class="alert alert-danger" *ngIf="experience.errors.required">*This Field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group col-md-8">
+        
+        <label for="skills">Skills</label><br>
+        <input type="radio" name="Java" id="java">Java
+        <input type="radio" name="SQL" id="SQL">SQL
+        <input type="radio" name="SPRINGS" id="Springs">SPRINGS
+        <!-- <button type="submit" class="btn btn-outline-success float-right" [disabled]="skills.invalid" >Submitt</button> -->
+       
+      </div>
+
+       
+        <div class="form-group">
+            <input type="number" name="cctc" id="cctc" class="form-control" placeholder="Enter CCTC...." #cctc="ngModel" ngModel required>
+            <div *ngIf="cctc.touched && cctc.invalid">
+            <p class="alert alert-danger" *ngIf="cctc.errors.required">*This Field is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="number" name="ectc" id="ectc" class="form-control" placeholder="Enter ECTC...." #ectc="ngModel" ngModel required>
+            <div *ngIf="ectc.touched && ectc.invalid">
+            <p class="alert alert-danger" *ngIf="ectc.errors.required">*This Field is required</p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <input type="text" name="location" id="location" class="form-control" placeholder="Ready to relocate..?" #location="ngModel" ngModel required minlength=2>
+            <div *ngIf="location.touched && location.invalid">
+            <p class="alert alert-danger" *ngIf="location.errors.minlength">*This Field is required</p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-dark  float-right" [disabled]="form.invalid" >Schedule Interview</button>
+        </div>
+
+</form>
+    
+    

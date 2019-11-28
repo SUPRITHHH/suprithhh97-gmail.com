@@ -1,0 +1,17 @@
+package com.tyss.springcore;
+
+import org.springframework.context.annotation.Bean;
+
+import com.tyss.springcore.di.Hello;
+
+public class HelloConfiguration {
+
+	 @Bean(name="hello")
+	//  @Scope("prototype")
+	    
+		public Hello getHello() {
+	    	Hello hello = new Hello();
+	    	hello.setMsg("I love Python");
+			return hello;
+		}
+}

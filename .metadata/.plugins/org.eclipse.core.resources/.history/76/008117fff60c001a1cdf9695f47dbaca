@@ -1,0 +1,6 @@
+package com.tyss.jpawithhibernateapp.manytoone;
+
+public class Pencil {
+
+	private int pid
+}

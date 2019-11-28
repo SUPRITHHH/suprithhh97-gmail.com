@@ -1,0 +1,24 @@
+package com.tyss.springcore.di;
+
+import org.springframework.context.annotation.Bean;
+
+public class PetConfiguration {
+
+	 @Bean(name="dog")
+		public Animal getDog() {
+			return new Dog();
+		}
+	    
+	    @Bean(name="cat")
+	    public Cat getCat() {
+	    	return new Cat();
+	    }
+	    
+	    @Bean(name="pet")
+	    public Pet getPet() {
+	    	Pet pet = new Pet();
+	    	pet.setName("Bittu");
+	    	/*pet.setAnimal(getDog());*/
+	    	return pet;
+	    }
+}

@@ -1,0 +1,54 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body bg-primary" #form="ngForm" (ngSubmit)="loginData1(form)">
+    <h1 class="text-center bg-dark text-white">Form1</h1>
+    <div class="form-group">
+        <input type="text" name="company" id="company" class="form-control" placeholder="Enter Company Name...." #company="ngModel" ngModel required>
+        <div *ngIf="company.touched && company.invalid">
+        <p class="alert alert-danger" *ngIf="company.errors.required">*This Field is required</p>
+        </div>
+    </div>
+     
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Skills</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose</option>
+          <option value="1">Java</option>
+          <option value="2">Sql</option>
+          <option value="3">Angular</option>
+          <option value="4">Springs</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="experience" id="experience" class="form-control" placeholder="Enter Company Experience...." #experience="ngModel" ngModel required>
+        <div *ngIf="experience.touched && experience.invalid">
+        <p class="alert alert-danger" *ngIf="experience.errors.required">*This Field is required</p>
+        </div>
+    </div>
+
+        
+    
+        <div class="form-group">
+            <input type="number" name="mctc" id="mctc" class="form-control" placeholder="Enter Monthly Salary...." #mctc="ngModel" ngModel required>
+            <div *ngIf="mctc.touched && mctc.invalid">
+            <p class="alert alert-danger" *ngIf="mctc.errors.required">*This Field is required</p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <input type="text" name="location" id="location" class="form-control" placeholder="Enter location...." #location="ngModel" ngModel required>
+            <div *ngIf="location.touched && location.invalid">
+            <p class="alert alert-danger" *ngIf="location.errors.required">*This Field is required</p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >AddRequired</button>
+        </div>
+
+</form>
+    
+    
