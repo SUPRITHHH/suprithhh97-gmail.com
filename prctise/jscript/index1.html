@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document1</title>
+    <script>
+        var age = 22;
+        console.log('Age='+age);
+        var name = 'Chota Beam';
+        console.log('Name='+name);
+        var hasHobbies = true;
+        console.log('Has Hobbies='+hasHobbies);
+        var data=null;
+        console.log('Data='+data);
+        var married;
+        console.log('Married='+married);
+    </script>
+    <script src='date.js'></script>
+</head>
+<body>
+    <script>
+    var fruits=['Orange','Mango','figfruit'];
+    console.log('fruits=',fruits);
+    console.log('fruits1=',fruits[0]);
+    console.log('fruits length=',fruits.length);
+
+     var person={
+         firstName : 'Alia Bhat',
+         lastName :'Ranbir',
+         age:26,
+         phoneno:9008957673,
+         getFullName:function(){
+             return this.firstName + ' '+this.lastName
+         }
+     }
+     var lastName=person.lastName;
+     console.log('Last Name',lastName);
+     var personAge = person.age;
+     console.log('Age',personAge);
+     var fullName = person.getFullName();
+     console.log('Full Name',fullName);
+     </script>
+</body>
+</html>

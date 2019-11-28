@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+      <form action="">
+        <label for="firstname">First Name</label>
+        <br>
+        <input type="text" name="firstname" id="firstname" placeholder="Enter first Name"  required>
+        <br>
+        <label for="lastname">Last Name</label>
+        <br>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter lastName"  required>
+        <br>
+        <label for="companyname">Company Name</label>
+        <br>
+        <input type="text" name="companyname" id="companyname">
+        <br>
+        <label for="email">Email ID</label>
+        <br>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Enter Name"  required>
+        <br>
+        <label for="month">Joining Date</label><br>
+        <select name="month" id="month">
+            <option value="0" selected disabled>Select</option>
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="mar">March</option>
+        </select>
+        <br>
+        <label for="gender">Gender</label><br>
+        <input type="radio" name="gender" id="male">Male
+        <input type="radio" name="gender" id="female">female
+        <input type="radio" name="gender" id="others">Others
+        <br>
+        <label for="skills">Skills</label><br>
+        <input type="checkbox" name="java" id="java">Java <br>
+        <input type="checkbox" name="sql" id="sql">Sql <br>
+        <input type="checkbox" name="j2ee" id="j2ee">J2ee <br>
+        <input type="checkbox" name="hibernate" id="hibernate">Hibernate
+        <br>
+        <br>
+        <input type="submit" value="SUBMIT" name="submit" style="align-content: center">
+        <input type="reset" value="RESET" name="reset">
+      </form>
+
+      <br>
+      <br>
+      <br>
+
+      <form action="">
+
+            <label for="name">Full Name<span style="color:red">*</span></label><br>
+            <span><input type="text" name="firstname" id="firstname" >
+                
+                <input type="text" name="lastname" id="lastname" ><br>
+                <label for="firstname">FirstName</label>
+
+                <label for="lastname" style="margin-left:110px">LastName</label>
+                </span>
+                <br>
+                <br>
+                <label for="address">Address<span style="color:red">*</span></label><br><br>
+
+                <input type="text" name="streetaddress" id="streetaddress" maxlength="1000" ><br>
+                <label for="streetaddress">Street Address</label><br>
+
+                 
+                <br>
+                
+                <input type="text" name="streetaddress1" id="streetaddress1" maxlength="1000" ><br>
+                <label for="streetaddress1">Street Address Line2</label><br><br>
+
+                 <span>
+                        <select name="city" id="city">
+                                <option value="0" selected disabled>Select</option>
+                                <option value="shivamogga">SHIVAMOGGA</option>
+                                <option value="banglore">BANGLORE</option>
+                                <option value="mysore">MYSORE</option>
+                            </select>
+                              
+                            <select name="state" id="state">
+                                    <option value="0" selected disabled>Select</option>
+                                    <option value="karnataka">KARNATAKA</option>
+                                    <option value="kerala">KERALA</option>
+                                    <option value="odissa">ODISSA</option>
+                                </select>
+                 </span>
+
+                             <br>
+                             <span>
+                            <label for="city">City</label>
+                            <label for="state" style="margin-left: 90px">State/Province</label>
+
+                             </span>
+                             <BR>
+                                <br>
+
+                             <span>
+                             <input type="number" name="postal" id="postal">
+                             <select name="country" id="country">
+                                    <option value="0" selected disabled>Please Select</option>
+                                    <option value="india">INDIA</option>
+                                    <option value="nepal">NEPAL</option>
+                                    <option value="bhutan">BHUTAN</option>
+                                </select>
+
+                                <br>
+                                <span>
+                               <label for="postal">Postal/Zip Code</label>
+                               <label for="country" style="margin-left: 90px">Country</label>
+   
+                                </span>
+                 
+
+      </form>
+
+      <br>
+      <br>
+      <br>
+      <form action=""  style="background-color: lightslategray;text-align: start">
+        <br>
+        <br>
+        <br>
+            <label for="name">Full Name<span style="color:red">*</span></label>
+
+         <span><input type="text" name="firstname" id="firstname" style="margin-left:350px " size="15">
+            <input type="text" name="middletname" id="middletname" style="margin-left:180px " size="10" >
+            <input type="text" name="lastname" id="lastname" style="margin-left:210px " size="10" >
+         </span>
+         <br>   
+         <span>
+                <label for="firstname" style="margin-left: 430px">First Name</label>
+                <label for="middlename" style="margin-left: 260px">Middle Name</label>
+
+                <label for="lastname" style="margin-left:220px">Last Name</label>
+                </span>
+              <br>
+              <br>
+              <br>
+            <label for="address">Current Address<span style="color:red">*</span></label>
+
+            <input type="text" name="streetaddress" id="streetaddress" maxlength="1000" style="margin-left: 310px" size="80"><br>
+                <label for="streetaddress" style="margin-left: 430px">Street Address</label><br><br><br>
+
+                <input type="text" name="streetaddress1" id="streetaddress1" maxlength="1000" style="margin-left: 430px" size="80"><br>
+                <label for="streetaddress1"  style="margin-left: 430px">Street Address Line2</label><br>
+                <br><br><br>
+                             <span>
+                                    <input type="text" name="city" id="city" style="margin-left: 430px" size="20">
+                                    <input type="text" name="state" id="state" style="margin-left: 160px" size="30">
+                             </span>
+                             <br>
+                             <span>
+                            <label for="city" style="margin-left: 480px">City</label>
+                            <label for="state" style="margin-left: 350px">State/Province</label>
+
+                             </span>
+
+                            <br><br>
+                            <label for="email">Email Id<span style="color:red">*</span></label>
+                            <input type="email" name="email" id="email" style="margin-left: 360px" size="80">
+                            <br>
+                            <br><br>
+                            <label for="phone number">Phone number<span style="color:red">*</span></label>
+                            <input type="tel" name="code" id="code" style="margin-left: 325px" size="20">
+                            <input type="tel" name="phone" id="phone" style="margin-left: 150px" size="30">
+
+                            <br>
+                            
+                            <label for="code" style="margin-left: 480px">Area Code</label>
+                            <label for="state" style="margin-left: 300px">Phone Number</label>
+
+                             <br><br>
+                            <label for="phone number">Birth Date<span style="color:red">*</span></label>
+                            <select name="month" id="month" style="margin-left: 350px"  >
+                                    <option value="0" selected disabled></option>
+                                    <option value="jan">January</option>
+                                    <option value="feb">February</option>
+                                    <option value="mar">March</option>
+                                    <option value="mar">April</option>
+                                </select>
+
+                                <select name="day" id="day" style="margin-left: 60px">
+                                        <option value="0" selected disabled></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">24</option>
+                                        <option value="4">30</option>
+                                    </select>
+
+                                    <select name="year" id="year" style="margin-left: 60px" >
+                                            <option value="0" selected disabled></option>
+                                            <option value="1">1997</option>
+                                            <option value="2">1998</option>
+                                            <option value="3">1999</option>
+                                            <option value="4">2000</option>
+                                        </select>
+                                        <br>
+
+                                        <label for="month" style="margin-left: 480px">Month</label>
+                                        <label for="day" style="margin-left: 50px">Date</label>
+                                        <label for="year" style="margin-left: 70px">Year</label>
+
+
+
+    </form>
+
+    
+</body>
+</html>

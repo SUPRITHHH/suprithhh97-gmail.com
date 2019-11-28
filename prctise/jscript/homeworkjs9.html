@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sum</title>
+</head>
+<body>
+    <script>
+       
+       function rodo (num)
+       {
+            var sum=0;
+           for(var i=0 ;i< num.length ; i++)
+           {
+                sum = sum + num[i] ;
+           }  
+
+           console.log("sum",sum);
+       }
+
+       var num1 = [10,20,50,90,100];
+       rodo(num1);
+        
+        
+        
+    var rodo1 = function(num)
+       {
+            var sum=0;
+           for(var i=0 ;i< num.length ; i++)
+           {
+                sum = sum + num[i] ;
+           }  
+
+           console.log("sum",sum);
+       }
+
+       var num1 = [1,2,3,4];
+       rodo1(num1);
+
+
+
+       var rodo2 = (function(num)
+       {
+            var sum=0;
+           for(var i=0 ;i< num.length ; i++)
+           {
+                sum = sum + num[i] ;
+           }  
+
+           console.log("sum",sum);
+       }) (num1 = [1,2,3,4]);
+       
+       var rodo3 = (num) =>
+       {
+            var sum=0;
+           for(var i=0 ;i< num.length ; i++)
+           {
+                sum = sum + num[i] ;
+           }  
+
+           console.log("sum",sum);
+       }
+
+       var num1 = [1,2,3,4];
+       rodo3(num1);
+
+
+
+        
+        
+        
+        
+        </script>
+</body>
+</html>

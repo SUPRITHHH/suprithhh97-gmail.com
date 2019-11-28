@@ -1,0 +1,15 @@
+img{
+    height: 300px;
+    width : 250px;
+    border:1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 20px blue;/*horizontal => vertical => blurring*/ 
+    transition: 1s;
+}
+
+img:hover{
+    transform: scale(1.1,1.1);/* scale(width,height)*/
+}
