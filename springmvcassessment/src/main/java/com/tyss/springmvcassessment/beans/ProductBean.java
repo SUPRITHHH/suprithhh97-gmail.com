@@ -12,6 +12,7 @@ public class ProductBean {
 
 	@Id
 	@Column
+	
 	private int pid;
 	@Column
 	private String pname;

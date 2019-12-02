@@ -13,9 +13,11 @@
    <table>
    <tr>
     
-    <td><input type="number" name="id"></td>
-    <td><input type="submit" value="Search"></td>
+    <td><input type="number" name="quantity"></td>
+    <td><input type="submit" value="Add"></td>
    </tr>
+   
+   
    </table>
    </form>
 </fieldset>
