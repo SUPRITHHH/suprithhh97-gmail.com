@@ -11,7 +11,7 @@ import com.tyss.springcore.di.Pet;
 @Configuration
 public class PetConfiguration {
 
-	 @Bean(name="dog")
+	    @Bean(name="dog")
 		public Animal getDog() {
 			return new Dog();
 		}
