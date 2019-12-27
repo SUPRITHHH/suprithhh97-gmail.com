@@ -1,0 +1,47 @@
+<div class="col-md-10 offset-md-1 mt-5">
+<form action=""  #form="ngForm" (ngSubmit)="addEmployeeData(form)">
+    <div class="card">
+    <div class="card-header">
+    <h5>ADD EMPLOYEE FORM</h5>
+    </div>
+    <div class="card-body">
+    <div class="form-group">
+        <input type="text" name="empname" id="empname" class="form-control" placeholder="Enter Employee Name...." #empname="ngModel" ngModel required pattern="(?=.*[A-Z]).{4,}">
+        <div *ngIf="empname.touched && empname.invalid">
+        <p class="alert alert-danger" *ngIf="empname.errors.required">*This Field is required</p>
+        <p class="alert alert-danger" *ngIf="empname.errors.pattern">*Enter in capital letters</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="job" id="job" class="form-control" placeholder="Enter Job Role...." #job="ngModel" ngModel required pattern="(?=.*[A-Z]).{4,}">
+        <div *ngIf="job.touched && job.invalid">
+        <p class="alert alert-danger" *ngIf="job.errors.required">*This Field is required</p>
+        <p class="alert alert-danger" *ngIf="empname.errors.pattern">*Enter in capital letters</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="number" name="manager" id="manager" class="form-control" placeholder="Enter Manager Number...." #manager="ngModel" ngModel pattern="(?=.*[0-9]).{4,}" required>
+        <div *ngIf="manager.touched &&  manager.invalid">
+        <p class="alert alert-danger" *ngIf="manager.errors.required">*This Field is required</p>
+        <p class="alert alert-danger" *ngIf="manager.errors.pattern">*This Field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="date" name="hiredate" id="hiredate" class="form-control" placeholder="Enter Hire Date...." #hiredate="ngModel" ngModel required>
+        <div *ngIf="hiredate.touched && hiredate.invalid">
+        <p class="alert alert-danger" *ngIf="hiredate.errors.required">*This Field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="number" name="deptid" id="deptid" class="form-control" placeholder="Enter Department ID...." #deptid="ngModel" ngModel required>
+        <div *ngIf="deptid.touched && deptid.invalid">
+        <p class="alert alert-danger" *ngIf="deptid.errors.required">*This Field is required</p>
+    </div>
+    </div>
+   </div>
+   <div class="card-footer">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Add Employee</button>
+    </div>
+</div> 
+</form>
+</div>

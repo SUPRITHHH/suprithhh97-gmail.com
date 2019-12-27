@@ -1,0 +1,117 @@
+<table class="table table-bordered table-hover mt-4">
+    <thead class="thead-dark">
+    <tr>
+
+        <th>Serial Number</th>
+        <th table-primary>RequestId</th>
+        <th table-secondary>AssetName</th>
+        <th table-info>Employment Number</th>
+        <th table-warning>Manager Name</th>
+        <th>Approved</th>
+        <th>Reject</th>
+    </tr>
+ </thead>
+ <tbody>
+    <tr *ngFor="let assets of asset;index as i">
+       <td>{{i+1}}</td>
+       <td table-primary>{{assets.requestid}}</td>
+       <td table-secondary>{{assets.assestname}}</td>
+       <td table-info>{{assets.empno}}</td>
+       <td table-warning>{{assets.manager}}</td>
+       <td>
+        <button type="button" class= " btn btn-primary btn-md"  data-toggle="modal" data-target="#exampleModalCenter" (click)="selectUser(assets)">
+            Approved
+        </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document"  >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                 <div class="modal-body" *ngIf="SelectedUser" >   <!---- *ngIf="SelectedUser" -->
+                    <form action="" class="col-md-10 offset-1 mt-1 card card-body" #form="ngForm" (ngSubmit)="assetAllocationData(form)">
+                        <h1 class="text-center bg-dark text-white"> Asset Allocation Data</h1>
+                        <!-- <div class="form-group">
+                            <input type="number" name="allocation_id" id="allocation_id" class="form-control" placeholder="Enter Allocation Id...." #allocation_id="ngModel" ngModel required>
+                            <div *ngIf="allocation_id.touched && allocation_id.invalid">
+                            <p class="alert alert-danger" *ngIf="allocation_id.errors.required">*This Field is required</p>
+                            </div>
+                        </div> -->
+                        <div class="form-group">
+                            <input type="number" name="assestid" id="assestid" class="form-control" placeholder="Enter Asset Id...." #assestid="ngModel" ngModel  required>
+                            <div *ngIf="assestid.touched && assestid.invalid">
+                            <p class="alert alert-danger" *ngIf="assestid.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="assestname" id="assestname" class="form-control" placeholder="Enter Asset Name...." #assestname="ngModel" [(ngModel)]="SelectedUser.assestname" ngModel required>
+                            <div *ngIf="assestname.touched && assestname.invalid">
+                            <p class="alert alert-danger" *ngIf="assestname.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" name="empno" id="empno" class="form-control" placeholder="Enter Employee Number...." #empno="ngModel" ngModel [(ngModel)]="SelectedUser.empno" required>
+                            <div *ngIf="empno.touched && empno.invalid">
+                            <p class="alert alert-danger" *ngIf="empno.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="allocation_date" id="allocation_date" class="form-control" placeholder="Enter Allocation Date...." #allocation_date="ngModel" ngModel required>
+                            <div *ngIf="allocation_date.touched && allocation_date.invalid">
+                            <p class="alert alert-danger" *ngIf="allocation_date.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="release_date" id="release_date" class="form-control" placeholder="Enter Release Date...." #release_date="ngModel" ngModel required>
+                            <div *ngIf="release_date.touched && release_date.invalid">
+                            <p class="alert alert-danger" *ngIf="release_date.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="requestid" id="requestid" class="form-control" placeholder="Enter RequestId...." #requestid="ngModel" ngModel [(ngModel)]="SelectedUser.requestid" required>
+                            <div *ngIf="requestid.touched && requestid.invalid">
+                            <p class="alert alert-danger" *ngIf="requestid.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="status" id="status" class="form-control" placeholder="Enter Status...." #status="ngModel" [(ngModel)]="SelectedUser1" ngModel required>
+                            <div *ngIf="status.touched && status.invalid">
+                            <p class="alert alert-danger" *ngIf="status.errors.required">*This Field is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-outline-success float-right" (click)="close()">Close</button>
+                            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid" >Allocate</button>
+                           
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+            <button type="button" class="btn btn-success" style="transform: scale(1.2,1.0); "(click)="RejectUser(assets)">
+                Reject
+            </button> 
+            
+        </td>
+        </tr>
+        
+        </tbody>
+        </table>
+        
+        
+
+        
+       
+

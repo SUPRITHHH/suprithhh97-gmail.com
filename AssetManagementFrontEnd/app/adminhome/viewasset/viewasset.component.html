@@ -1,0 +1,98 @@
+
+<table class="table table-bordered table-hover mt-4">
+    <thead class="thead-dark">
+    <tr>
+
+        <th>Serial Number</th>
+        <th table-primary>AssetId</th>
+        <th table-secondary>AssetName</th>
+        <th table-info>Quantity</th>
+        <th table-warning>AssetStatus</th>
+        <th>Edit</th>
+       
+    </tr>
+ </thead>
+ <tbody>
+        <tr *ngFor="let org of asset ; index as i">
+           <td>{{i+1}}</td>
+           <td table-primary>{{org.assestid}}</td>
+           <td table-secondary>{{org.assestname}}</td>
+           <td table-info>{{org.quantity}}</td>
+           <td table-warning>{{org.status}}</td>
+           <td>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" (click)="selectUser(org)">
+                Edit
+            </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document"  >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                     <div class="modal-body" *ngIf="SelectedUser" > 
+                         <!---- *ngIf="SelectedUser" -->
+                         <div class="col-md-12  mt-4">
+                        <form action=""  #form="ngForm" (ngSubmit)="UpdateData(form)">
+                          <div class="card">
+                            <div class="card-header">
+                            <h5>UPDATE ASSET </h5>
+                          </div>
+                          <div class="card-body">
+                            <div class="form-group">
+                                <input type="number" name="assestid" id="assestid"  class="form-control" placeholder="Enter Asset Id...." #assestid="ngModel" ngModel [(ngModel)]="SelectedUser.assestid" required>
+                                <div *ngIf="assestid.touched && assestid.invalid">
+                                <p class="alert alert-danger" *ngIf="assestid.errors.required">*This Field is required</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="assestname" id="assestname" class="form-control" placeholder="Enter Asset Name...." #assestname="ngModel" ngModel [(ngModel)]="SelectedUser.assestname" required pattern="(?=.*[a-z])(?=.*[A-Z]).{4,}">
+                                <div *ngIf="assestname.touched && assestname.invalid">
+                                <p class="alert alert-danger" *ngIf="assestname.errors.required">*This Field is required</p>
+                                <p class="alert alert-danger" *ngIf="assestname.errors.pattern">(Example:Computer,Laptop,Pendrive,Mouse)</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="assesdesc" placeholder="Enter Asset Description..." #assesdesc="ngModel" ngModel [(ngModel)]="SelectedUser.assesdesc" required ></textarea>
+                                <div *ngIf="assesdesc.touched && assesdesc.invalid">
+                                    <p class="alert alert-danger" *ngIf="assesdesc.errors.required">*This Field is required</p>
+                                </div>   
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Enter Asset Quantity...." #quantity="ngModel" ngModel [(ngModel)]="SelectedUser.quantity" required pattern="^\d*\.?\d+$">
+                                <div *ngIf="quantity.touched && quantity.invalid">
+                                <p class="alert alert-danger" *ngIf="quantity.errors.required">*This Field is required</p>
+                                <p class="alert alert-danger" *ngIf="quantity.errors.pattern">*It Should be greater than zero</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="status" id="status" class="form-control" placeholder="Enter status..." #status="ngModel" ngModel [(ngModel)]="SelectedUser.status" required pattern="(?=.*[a-z]).{4,}">
+                                <div *ngIf="status.touched && status.invalid">
+                                <p class="alert alert-danger" *ngIf="status.errors.required">*This Field is required</p>
+                                <p class="alert alert-danger" *ngIf="status.errors.pattern">(Example:approved,notapproved)</p>
+                              </div>
+                            </div>
+                           </div>
+                            
+                           <div class="card-footer">
+                                <button type="submit" class="btn btn-outline-primary float-right" [disabled]="form.invalid" >UPDATE</button>
+                              </div>
+                            </div> 
+                            </form>
+                            </div>
+                        
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+           </td>
+        </tr>
+ </tbody>
+         
+</table>

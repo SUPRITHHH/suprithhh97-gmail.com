@@ -1,0 +1,106 @@
+ body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+nav{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height:100px;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    background: rgb(0,0,0);
+}
+
+nav.logo{
+    padding: 20px 18px;
+    height:80px;
+    float:left;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+nav ul li a{
+    line-height: 50px;
+    color:#fff;
+    padding: 10px 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left:-6% ;
+}
+
+nav ul li a:hover{
+     background: rgb(0,0,0,0.7);
+     border-radius: 6px;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background: url('img\green-1072828_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+} */
+
+.tilt{
+    background-image: url('img\avenue-2215317_960_720.jpg');
+    background-size: cover;
+}
+
+
+/* #mySidenav a {
+    position: absolute;
+    left: -80px;
+   
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    
+  }
+  
+  
+  
+  #about {
+    
+    background-color: #4CAF50;
+    margin-top: 7%;
+    margin-left: 7%; 
+    transform: scale(1.4,0.6);
+    padding: 0.3px;
+  }
+  
+  #blog {
+    top: 80px;
+    background-color: #2196F3;
+    margin-top: 11%;
+    margin-left: 9%;
+    transform: scale(2.0,0.6);
+  }
+  
+  #projects {
+    top: 140px;
+    background-color: #f44336;
+  }
+  
+  #contact {
+    top: 200px;
+    background-color: #555
+  } */

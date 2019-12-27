@@ -1,0 +1,29 @@
+
+    <form class="form-inline offset-4 mt-2" #form="ngForm" (ngSubmit)="doSearch(form)" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search"  id="empno" name="empno" #empno="ngModel" ngModel aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  
+
+<table class="table table-bordered table-hover mt-4">
+    <thead class="thead-dark">
+    <tr>
+
+        <th>Serial Number</th>
+        <th table-primary>RequestId</th>
+        <th table-secondary>AssetName</th>
+        <th table-info>Employment Number</th>
+        <th table-warning>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let assets of asset;index as i">
+           <td>{{i+1}}</td>
+           <td table-primary>{{assets.requestid}}</td>
+           <td table-secondary>{{assets.assestname}}</td>
+           <td table-info>{{assets.empno}}</td>
+           <td table-warning>{{assets.status}}</td>
+           </tr>
+    </tbody>
+    </table>
+    

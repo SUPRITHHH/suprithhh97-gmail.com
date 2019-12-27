@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark"  >
+    <a class="navbar-brand" routerLink="/"></a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" style="background: rgba(0,0,0,0.5);"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active"  *ngIf='!isLoggedIn()' >
+                <a class="nav-link" routerLink="/">Home</a>
+            </li>
+             <li class="nav-item" *ngIf='isAdmin()'>    
+                <a class="nav-link" routerLink="/admin">Admin</a>
+            </li>
+            <li class="nav-item" *ngIf='isManager()' (click)="delt()">      
+                <a class="nav-link" routerLink="/manager">Manager</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf='!isLoggedIn()'>
+                <a class="nav-link" routerLink="login">Login</a>
+            </li>
+            <li class="nav-item" *ngIf='isLoggedIn()'>
+                <button class="btn btn-outline-light" (click)='logout()'>Logout</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
